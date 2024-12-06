@@ -1,0 +1,23 @@
+{% extends 'store/base.html' %}
+{% load static %}
+{% block title %}| Store {% endblock %}
+{% block content %}
+{% include 'store/hero.html' %}
+<div class="text-center" id="products">
+	<h2 class="fs-4 fw-bolder text-uppercase">All Products</h2>
+</div>
+	<div class="row my-lg-5">
+		{% for product in products %}
+		<div class="col-lg-4 mb-3">
+			<img class="thumbnail card-img" src="{{ product.imageURL }}">
+			<div class="box-element product">
+				<h6><strong>{{ product.name }}</strong></h6>
+				<hr>
+				<button class="btn btn-primary add-btn update-cart" data-product="{{ product.id }}" data-action="add">Add to Cart</button>
+				<a class="btn btn-outline" href="#">View</a>
+				<h4 style="display: inline-block;float: right;"><strong>${{ product.price|floatformat:2 }}</strong></h4>	
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+{% endblock %}

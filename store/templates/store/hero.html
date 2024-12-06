@@ -1,0 +1,17 @@
+{% load static %}
+{% block content %}
+<!-- Hero Section with Animation -->
+<section class="row min-vh-75 py-xl-5 py-5 border-bottom d-flex gx-xl-5 gy-xl-5 my-5 justify-content-between align-items-center hero-section">
+    <div class="col-lg-5 mb-4 text-xl-start text-center">
+        <h1 class="display-5 fw-bold">Unlock Exclusive Deals &amp; Discounts</h1>
+        <p class="lead hero-paragraph">
+            Get ready to shop &apos;till you drop! Our platform offers a wide range of products at unbeatable prices.
+        </p>
+        <a class="btn btn-primary hero-button fw-bold" href="#products">Browse Collection</a>
+    </div>
+    <div class="col-lg-6">
+        <img class="img-fluid d-none d-xl-block rounded" src="{% static 'images/hero.jpg' %}">
+    </div>
+</section>
+{% endblock %}
+
